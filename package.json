@@ -1,5 +1,6 @@
 {
-  "name": "vite-plugin-template",
+  "name": "vite-plugin-pinecone-pages",
+  "author": "Rafik El Hadi Houari",
   "version": "0.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -16,19 +17,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wheatjs/vite-plugin-template.git"
+    "url": "git+https://github.com/rehhouari/vite-plugin-pinecone-pages.git"
   },
   "files": [
     "dist",
     "client.d.ts"
   ],
-  "keywords": [],
-  "author": "",
+  "keywords": ["pinecone-router", "router", "routing", "vite"],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/wheatjs/vite-plugin-template/issues"
+    "url": "https://github.com/rehhouari/vite-plugin-pinecone-pages/issues"
   },
-  "homepage": "https://github.com/wheatjs/vite-plugin-template#readme",
+  "homepage": "https://github.com/rehhouari/vite-plugin-pinecone-pages#readme",
   "devDependencies": {
     "@antfu/eslint-config": "^0.6.5",
     "@types/debug": "^4.1.5",
@@ -42,5 +42,13 @@
     "tsup": "^4.11.0",
     "typescript": "^4.2.4",
     "vite": "^2.3.3"
+  },
+  "dependencies": {
+    "@types/markdown-it": "^12.0.1",
+    "fast-glob": "^3.2.5",
+    "front-matter": "^4.0.2",
+    "markdown-it": "^12.0.6",
+    "markdown-it-anchor": "^7.1.0",
+    "markdown-it-prism": "^2.1.6"
   }
 }
