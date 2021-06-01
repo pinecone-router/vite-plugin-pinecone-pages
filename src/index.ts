@@ -3,7 +3,7 @@ import type { Options } from './types';
 import { virtualRoutesId, virtualUpdateId } from './constants';
 import { generateRoutes } from './generate';
 
-export default function VitePluginMyPlugin(
+export default function PineconePages(
 	options: Options = {
 		pagesDir: 'src/pages',
 		layoutsDir: 'src/layouts/',

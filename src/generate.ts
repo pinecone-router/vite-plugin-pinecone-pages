@@ -102,7 +102,7 @@ export async function generateRoutes(options: Options) {
 
 			r.view = view;
 		} else {
-			let tsModule = null;
+			// let tsModule = null;
 			if (file.ext == 'ts') {
 				let data = fs.readFileSync(path, 'utf-8');
 				let js = ts.transpileModule(data, {
@@ -110,12 +110,16 @@ export async function generateRoutes(options: Options) {
 						module: ts.ModuleKind.ES2015,
 					},
 				});
-				tsModule =
-					'data:text/javascript;base64,' +
-					Buffer.from(js.outputText).toString('base64');
+				// tsModule =
+				// 	'data:text/javascript;base64,' +
+				// 	Buffer.from(js.outputText).toString('base64');
+				path = path+Date.now().toString()+'tmp.js'
+				fs.writeFileSync(path, js.outputText)
+
 			}
-			let handlerFunction = (await import(tsModule ?? path)).default;
+			let handlerFunction = (await import(path)).default;
 			r.handler = handlerFunction.toString().replace(/\r?\n|\r/g, '');
+			if (file.ext == 'ts') fs.rmSync(path);
 		}
 		let index: number = generatedRoutes.findIndex((e) => e.name == r.name);
 		if (index != -1) {
