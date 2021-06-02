@@ -23,7 +23,12 @@
     "dist",
     "client.d.ts"
   ],
-  "keywords": ["pinecone-router", "router", "routing", "vite"],
+  "keywords": [
+    "pinecone-router",
+    "router",
+    "routing",
+    "vite"
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/rehhouari/vite-plugin-pinecone-pages/issues"
@@ -45,10 +50,13 @@
   },
   "dependencies": {
     "@types/markdown-it": "^12.0.1",
+    "@types/picomatch": "^2.2.4",
+    "chalk": "^4.1.1",
     "fast-glob": "^3.2.5",
     "front-matter": "^4.0.2",
     "markdown-it": "^12.0.6",
     "markdown-it-anchor": "^7.1.0",
-    "markdown-it-prism": "^2.1.6"
+    "markdown-it-prism": "^2.1.6",
+    "picomatch": "^2.3.0"
   }
 }

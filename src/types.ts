@@ -15,4 +15,8 @@ export interface Options {
 	 * @default `public/pages/`
 	 */
 	viewsDir: string;
+	/**
+	 * @default 100
+	 */
+	delay: number;
 }

@@ -21,10 +21,6 @@ export const tf = (code: string) => {
 	};
 };
 
-export function slash(str: string) {
-	return str.replace(/\\/g, '/');
-}
-
 export async function getPageFiles(path: string) {
 	const ext = extensionsToGlob(extensions);
 	const files = await fg(`**/*.${ext}`, {
@@ -41,14 +37,15 @@ function extensionsToGlob(extensions: string[]) {
 		: extensions[0] || '';
 }
 
-export function isDynamicRoute(routePath: string) {
-	return dynamicRouteRE.test(routePath);
-}
+export const slash = (str: string) => str.replace(/\\/g, '/');
 
-export function isCatchAllRoute(routePath: string) {
-	return /^\[\.{3}/.test(routePath);
-}
+export const isDynamicRoute = (routePath: string) =>
+	dynamicRouteRE.test(routePath);
 
-export function relativePath(path: string) {
-	return '.' + path.match(/(\/src\/pages\/.+)/gi)![0];
-}
+export const isCatchAllRoute = (routePath: string) =>
+	/^\[\.{3}/.test(routePath);
+
+export const relativePath = (path: string) =>
+	'.' + path.match(/(\/src\/pages\/.+)/gi)![0];
+
+export const extractHandlers = (h: string) => h.replace(/\s/, '').split(',');
