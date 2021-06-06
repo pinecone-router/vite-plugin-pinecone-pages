@@ -10,7 +10,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/rehhouari/vite-plugin-pinecone-pages.git"
+    "url": "git+https://github.com/pinecone-router/vite-plugin-pinecone-pages.git"
 	},
 	"files": [
 		"src",
@@ -25,9 +25,9 @@
 	],
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/rehhouari/vite-plugin-pinecone-pages/issues"
+    "url": "https://github.com/pinecone-router/vite-plugin-pinecone-pages/issues"
 	},
-	"homepage": "https://github.com/rehhouari/vite-plugin-pinecone-pages#readme",
+  "homepage": "https://github.com/pinecone-router/vite-plugin-pinecone-pages#readme",
 	"devDependencies": {
 		"@antfu/eslint-config": "^0.6.5",
 		"@types/debug": "^4.1.5",
