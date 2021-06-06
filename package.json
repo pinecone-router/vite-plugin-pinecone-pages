@@ -1,8 +1,8 @@
 {
 	"name": "vite-plugin-pinecone-pages",
 	"author": "Rafik El Hadi Houari",
-  "version": "0.0.0-testing-1",
-  "description": "WIP-DO NOT USE.",
+  "version": "0.0.1",
+  "description": "File-based routing for Pinecone Router",
 	"main": "dist/index.js",
 	"scripts": {
 		"dev": "pnpm run build -- --watch",

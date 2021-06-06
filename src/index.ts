@@ -20,7 +20,6 @@ export default function PineconePages(
       delay: 100,
       MarkdownIt: undefined,
       warppingComponent: '<div x-data="$name">$content</div>',
-      htmlRootString: '<!--root-->',
     },
     ...userOptions,
   }
@@ -87,17 +86,6 @@ export default function PineconePages(
           window.PineconeRouter.navigate(window.PineconeRouter.currentContext.path)
         })`.replace(/(\n|\s\s)/, '')
       }
-    },
-
-    async transformIndexHtml(html) {
-      if (isBuild) {
-        if (generatedRoutes !== undefined) {
-          const index = generatedRoutes.findIndex(e => e.route === '/')
-          const indexViewContent = fs.readFileSync(options.viewsDir + generatedRoutes[index].view, 'utf-8')
-          html = html.replace(options.htmlRootString, indexViewContent)
-        }
-      }
-      return html
     },
 
     async handleHotUpdate({ file }) {

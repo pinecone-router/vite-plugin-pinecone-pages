@@ -29,11 +29,6 @@ export interface Options {
    * @default `<div x-data="$name">$content</div>`
    */
   warppingComponent: string
-  /**
-   * @default `<!--root-->`
-   */
-  htmlRootString: string
-
 }
 
 export interface Route {
